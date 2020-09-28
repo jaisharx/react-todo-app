@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 
-import Form from './components/Form';
-import TodoList from './components/TodoList';
+import Form from '../Form';
+import TodoList from '../TodoList';
 
 function App() {
     return (
@@ -11,9 +11,9 @@ function App() {
                 <h1>what're you upto today?</h1>
             </header>
 
-            <Form />
+            <Form /> {/* search box on the top */}
 
-            <TodoList />
+            <TodoList /> {/* todo items */}
         </div>
     );
 }
