@@ -9,6 +9,8 @@ const Form = (props) => {
     const submitTodoHandler = (e) => {
         e.preventDefault();
 
+        if(props.inputText === "") return;
+
         const todo = {
             inputText: props.inputText,
             completed: false,
