@@ -11,7 +11,7 @@ function App() {
                 <h1>what're you upto today?</h1>
             </header>
 
-            <Form /> {/* search box on the top */}
+            <Form /> {/* search box */}
 
             <TodoList /> {/* todo items */}
         </div>
