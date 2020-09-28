@@ -1,31 +1,69 @@
-header {
-    font-size: 1.4rem;
-}
-
-header,
-form {
-    min-height: 20vh;
+body {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form input,
-form button {
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
+
+header {
+    font-size: .7rem;
+    margin-bottom: -.8rem;
 }
-form button {
-    color: #ff6f47;
-    background: #f7fffe;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+form {
+    display: flex;
+    align-items: center;
+
+    input {
+        padding: .7rem;
+        font-size: 1.6rem;
+        width: 30vw;
+        
+        border-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        box-shadow: var(--box-shadow);
+
+        &:focus {
+            outline: none;
+            background-color: white;
+
+        }
+    }
+
+    button {
+        display: flex;
+        padding: 0.64rem;
+        font-size: 2rem;   
+
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+        transition: all 0.3s ease;
+        color: #ff6f47;
+        background: #f7fffe;
+        cursor: pointer;
+        border-radius: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        &:hover {
+            background: #ff6f47;
+            color: white;
+        }
+    }
+    
+    input,
+    button {
+        border: none;
+        background: white;
+    }
 }
-form button:hover {
-    background: #ff6f47;
-    color: white;
+
+.filter-todo {
+    padding: .95rem;
 }
+
 .todo-container {
     display: flex;
     justify-content: center;
@@ -46,9 +84,6 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
-}
-.filter-todo {
-    padding: 1rem;
 }
 .todo li {
     flex: 1;
@@ -102,10 +137,13 @@ select {
     margin: 1rem;
     position: relative;
     overflow: hidden;
+
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
 }
 select {
     color: #ff6f47;
-    font-family: 'Poppins', sans-serif;
+    font: inherit;
     cursor: pointer;
     width: 12rem;
 }
@@ -113,7 +151,7 @@ select {
 .select::after {
     content: '\25BC';
     position: absolute;
-    top: 0;
+    top: -2px;
     right: 0;
     padding: 1rem;
     background: #ff6f47;
