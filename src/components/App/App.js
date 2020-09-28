@@ -39,6 +39,7 @@ function App() {
     useEffect(() => {
         filterHandler();
         saveToLocalStorage();
+        // eslint-disable-next-line
     }, [todos, status]);
 
     return (
