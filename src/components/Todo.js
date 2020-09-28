@@ -22,7 +22,7 @@ const Todo = (props) => {
 
     return (
         <div className="todo">
-            <li className="todo-item">{props.text}</li>
+            <li className={`todo-item ${props.todo.completed ? 'completed' : ''}`}>{props.text}</li>
             <button className="complete-btn" onClick={completeHandler}>
                 <FaCheck />
             </button>

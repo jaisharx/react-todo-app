@@ -21,6 +21,10 @@ const Form = (props) => {
         props.setInputText(""); // resetting input field
     };
 
+    const statusHandler = (e) => {
+        props.setStatus(e.target.value);
+    };
+
     return (
         <form>
             <input
@@ -34,7 +38,7 @@ const Form = (props) => {
                 <FaPlusSquare />
             </button>
             <div className="select">
-                <select name="todos" className="filter-todo">
+                <select onChange={statusHandler} name="todos" className="filter-todo">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
