@@ -1,11 +1,34 @@
 import React from 'react';
 import { FaPlusSquare } from 'react-icons/fa';
 
-const Form = () => {
+const Form = (props) => {
+    const inputTextHandler = (e) => {
+        props.setInputText(e.target.value);
+    };
+
+    const submitTodoHandler = (e) => {
+        e.preventDefault();
+
+        const todo = {
+            inputText: props.inputText,
+            completed: false,
+            id: Math.random() * 1000,
+        };
+
+        props.setTodos([...props.todos, todo]);
+        props.setInputText(""); // resetting input field
+    };
+
     return (
         <form>
-            <input type="text" className="todo-input" />
-            <button className="todo-button" type="submit">
+            <input
+                value={props.inputText}
+                type="text"
+                className="todo-input"
+                onChange={inputTextHandler}
+                spellCheck="false"
+            />
+            <button className="todo-button" type="submit" onClick={submitTodoHandler}>
                 <FaPlusSquare />
             </button>
             <div className="select">
