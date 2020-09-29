@@ -4,6 +4,8 @@ import styles from './App.module.scss';
 import Form from './Form/Form';
 import TodoList from './TodoList/TodoList';
 
+import { AiFillTwitterCircle } from 'react-icons/ai';
+
 function App() {
     const [inputText, setInputText] = useState('');
     const [status, setStatus] = useState('all');
@@ -30,7 +32,7 @@ function App() {
 
     const getLocalStorage = () => {
         if (localStorage.getItem('todos') !== null) {
-            setTodos(JSON.parse(localStorage.getItem('todos')))
+            setTodos(JSON.parse(localStorage.getItem('todos')));
         }
     };
 
@@ -52,6 +54,16 @@ function App() {
                 setStatus={setStatus}
             />
             <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos} />
+            
+            {/* twitter contact link */}
+            <a
+                href="https://twitter.com/jaisharx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contact}
+            >
+                <AiFillTwitterCircle />
+            </a>
         </div>
     );
 }
