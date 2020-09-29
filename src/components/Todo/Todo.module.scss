@@ -4,8 +4,8 @@
     font-size: 2.2rem;
     background: #fff;
     color: black;
-    min-width: 500px;
-    width: 40vw;
+    width: 45vw;
+    max-width: 640px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,11 @@
             text-decoration: line-through;
             opacity: 0.5;
         }
+    }
+
+    @media (max-width: 800px) {
+        font-size: 1.1rem;
+        width: 90vw;
     }
 }
 

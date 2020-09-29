@@ -1,11 +1,20 @@
 .header {
     font-size: .7rem;
     margin-bottom: -.8rem;
+
+    @media (max-width: 800px) {
+        font-size: .6rem;
+        text-align: center;
+    }
 }
 
 .form {
     display: flex;
     align-items: center;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 
     .todoInput {
         padding: .7rem;
@@ -20,6 +29,10 @@
         &:focus {
             outline: none;
             background-color: white;
+        }
+
+        @media (max-width: 800px) {
+            width: 80%;
         }
     }
 
@@ -58,6 +71,18 @@
     .todoButton {
         border: none;
         background: white;
+    }
+
+}
+
+.formGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 800px) {
+        margin-top: 1rem;
+        width: 100%;
     }
 }
 

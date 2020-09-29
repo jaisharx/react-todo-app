@@ -33,16 +33,18 @@ const Form = (props) => {
                 <h1>what're you upto today?</h1>
             </header>
             <form className={styles.form}>
-                <input
-                    value={props.inputText}
-                    type="text"
-                    className={styles.todoInput}
-                    onChange={inputTextHandler}
-                    spellCheck="false"
-                />
-                <button className={styles.todoButton} type="submit" onClick={submitTodoHandler}>
-                    <FaPlusSquare />
-                </button>
+                <div className={styles.formGroup}>
+                    <input
+                        value={props.inputText}
+                        type="text"
+                        className={styles.todoInput}
+                        onChange={inputTextHandler}
+                        spellCheck="false"
+                    />
+                    <button className={styles.todoButton} type="submit" onClick={submitTodoHandler}>
+                        <FaPlusSquare />
+                    </button>
+                </div>
                 <div className={styles.select}>
                     <select onChange={statusHandler} name="todos" className={styles.filterTodoList}>
                         <option value="all">All</option>
