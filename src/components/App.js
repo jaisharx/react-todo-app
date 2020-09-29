@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 
 import Form from './Form/Form';
 import TodoList from './TodoList/TodoList';
@@ -43,7 +43,7 @@ function App() {
     }, [todos, status]);
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <Form
                 todos={todos}
                 setTodos={setTodos}

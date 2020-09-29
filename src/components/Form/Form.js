@@ -1,4 +1,6 @@
 import React from 'react';
+
+import styles from './Form.module.scss';
 import { FaPlusSquare } from 'react-icons/fa';
 
 const Form = (props) => {
@@ -27,22 +29,22 @@ const Form = (props) => {
 
     return (
         <div>
-            <header>
+            <header className={styles.header}>
                 <h1>what're you upto today?</h1>
             </header>
-            <form>
+            <form className={styles.form}>
                 <input
                     value={props.inputText}
                     type="text"
-                    className="todo-input"
+                    className={styles.todoInput}
                     onChange={inputTextHandler}
                     spellCheck="false"
                 />
-                <button className="todo-button" type="submit" onClick={submitTodoHandler}>
+                <button className={styles.todoButton} type="submit" onClick={submitTodoHandler}>
                     <FaPlusSquare />
                 </button>
-                <div className="select">
-                    <select onChange={statusHandler} name="todos" className="filter-todo">
+                <div className={styles.select}>
+                    <select onChange={statusHandler} name="todos" className={styles.filterTodoList}>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>

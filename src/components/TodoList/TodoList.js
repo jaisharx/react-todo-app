@@ -1,9 +1,11 @@
 import React from 'react';
+
 import Todo from '../Todo/Todo';
+import styles from "TodoList.module.scss";
 
 const TodoList = (props) => {
     return (
-        <div className="todo-container">
+        <div className={styles.todoContainer}>
             <ul className="todo-list">
                 {props.filteredTodos.map((todo) => (
                     <Todo
