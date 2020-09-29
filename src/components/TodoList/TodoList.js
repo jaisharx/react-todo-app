@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Todo from '../Todo/Todo';
-import styles from "TodoList.module.scss";
+import styles from "./TodoList.module.scss";
 
 const TodoList = (props) => {
     return (
         <div className={styles.todoContainer}>
-            <ul className="todo-list">
+            <ul className={styles.todoList}>
                 {props.filteredTodos.map((todo) => (
                     <Todo
                         text={todo.inputText}

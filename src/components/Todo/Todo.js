@@ -1,7 +1,10 @@
 import React from 'react';
+
+import styles from "./Todo.module.scss";
 import { FaCheck, FaTrash } from 'react-icons/fa';
 
 const Todo = (props) => {
+    
     const deleteHandler = () => {
         props.setTodos(props.todos.filter((el) => el.id !== props.todo.id));
     };
@@ -21,12 +24,12 @@ const Todo = (props) => {
     };
 
     return (
-        <div className="todo">
-            <li className={`todo-item ${props.todo.completed ? 'completed' : ''}`}>{props.text}</li>
-            <button className="complete-btn" onClick={completeHandler}>
+        <div className={styles.todo}>
+            <li className={`${props.todo.completed ? styles.completed : ''}`}>{props.text}</li>
+            <button className={styles.completeBtn} onClick={completeHandler}>
                 <FaCheck />
             </button>
-            <button className="trash-btn" onClick={deleteHandler}>
+            <button className={styles.trashBtn} onClick={deleteHandler}>
                 <FaTrash />
             </button>
         </div>
