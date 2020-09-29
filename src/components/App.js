@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 
-import Form from '../Form';
-import TodoList from '../TodoList';
+import Form from './Form/Form';
+import TodoList from './TodoList/TodoList';
 
 function App() {
     const [inputText, setInputText] = useState('');
@@ -43,10 +43,7 @@ function App() {
     }, [todos, status]);
 
     return (
-        <div className="App">
-            <header>
-                <h1>what're you upto today?</h1>
-            </header>
+        <div className="container">
             <Form
                 todos={todos}
                 setTodos={setTodos}
