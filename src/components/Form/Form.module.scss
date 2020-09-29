@@ -90,10 +90,10 @@
     margin: .9rem;
     position: relative;
     overflow: hidden;
-
+    
     border-radius: 4px;
     box-shadow: var(--box-shadow);
-
+    
     &::after {
         content: '\25BC';
         position: absolute;
@@ -104,9 +104,10 @@
         cursor: pointer;
         pointer-events: none;
     }
-
+    
     .filterTodoList {
         padding: .95rem;
+        background-color: #fff;
     
         -webkit-appearance: none;
         -moz-appearance: none;
