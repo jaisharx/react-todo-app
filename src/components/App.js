@@ -4,7 +4,7 @@ import styles from './App.module.scss';
 import Form from './Form/Form';
 import TodoList from './TodoList/TodoList';
 
-import { AiFillTwitterCircle } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 
 function App() {
     const [inputText, setInputText] = useState('');
@@ -55,14 +55,14 @@ function App() {
             />
             <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos} />
             
-            {/* twitter contact link */}
+            {/* github source code link */}
             <a
-                href="https://twitter.com/jaisharx"
+                href="https://github.com/jaisharx/react-todo-app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contact}
             >
-                <AiFillTwitterCircle />
+                <AiFillGithub />
             </a>
         </div>
     );
